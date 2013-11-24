@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmpayment" >
+    <name>VM - Payment, Onpay</name>
+    <creationDate>November 2013</creationDate>
+    <author>OnPay.ru</author>
+    <authorUrl>http://onpay.ru</authorUrl>
+    <copyright>Copyright (C) 2013, OnPay.ru</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>2.0.0</version>
+    <description>Onpay payment plugin</description>
+    <languages>
+	<language tag="ru-RU">ru-RU.plg_vmpayment_onpay.ini</language>
+	<language tag="en-GB">en-GB.plg_vmpayment_onpay.ini</language>
+    </languages>
+    <files>
+	<filename plugin="standard">onpay.php</filename>
+	<filename plugin="standard">onpay_notify.php</filename>
+    </files>	
+	<params addpath="/administrator/components/com_virtuemart/elements">
+	<param type="vmjpluginwarning" />
+	<param name="ONPAY_LOGIN" type="text"  label="VMPAYMENT_ONPAY_ONPAY_LOGIN" description="VMPAYMENT_ONPAY_ONPAY_LOGIN_EXPLAIN" />
+	<param name="ONPAY_SECRET_KEY" type="text"  label="VMPAYMENT_ONPAY_ONPAY_SECRET_KEY" description="VMPAYMENT_ONPAY_ONPAY_SECRET_KEY_EXPLAIN" />
+	<param name="ONPAY_ADD_PARAMS" type="text"  label="VMPAYMENT_ONPAY_ONPAY_ADD_PARAMS" description="VMPAYMENT_ONPAY_ONPAY_ADD_PARAMS_EXPLAIN" />
+	<param name="ONPAY_CONVERT" type="list"  label="VMPAYMENT_ONPAY_ONPAY_CONVERT" description="VMPAYMENT_ONPAY_ONPAY_CONVERT_EXPLAIN" >
+	    <option value="0">COM_VIRTUEMART_NO</option>
+	    <option value="1">COM_VIRTUEMART_YES</option>
+	</param>
+	<param name="ONPAY_PRICE_FINAL" type="list"  label="VMPAYMENT_ONPAY_ONPAY_PRICE_FINAL" description="VMPAYMENT_ONPAY_ONPAY_PRICE_FINAL_EXPLAIN" >
+	    <option value="0">COM_VIRTUEMART_NO</option>
+	    <option value="1">COM_VIRTUEMART_YES</option>
+	</param>
+	<param name="ONPAY_FORMID" type="list"  label="VMPAYMENT_ONPAY_ONPAY_FORMID" description="VMPAYMENT_ONPAY_ONPAY_FORMID_EXPLAIN" >
+	    <option value="2">VMPAYMENT_ONPAY_ONPAY_FORMID_FORM_DEFAULT_CAPTION</option>
+	    <option value="7">VMPAYMENT_ONPAY_ONPAY_FORMID_DESIGN_N7_CAPTION</option>
+	    <option value="8">VMPAYMENT_ONPAY_ONPAY_FORMID_DESIGN_N8_CAPTION</option>
+	    <option value="9">VMPAYMENT_ONPAY_ONPAY_FORMID_MOBILE_FORM_CAPTION</option>
+	</param>
+	<param name="ONPAY_LANG" type="list"  label="VMPAYMENT_ONPAY_ONPAY_LANG" description="VMPAYMENT_ONPAY_ONPAY_LANG_EXPLAIN" >
+	    <option value="">VMPAYMENT_ONPAY_ONPAY_LANG_DEFAULT_CAPTION</option>
+	    <option value="en">VMPAYMENT_ONPAY_ONPAY_LANG_EN_CAPTION</option>
+	</param>
+	<param name="ONPAY_CURRENCY_USD" type="list"  label="VMPAYMENT_ONPAY_ONPAY_CURRENCY_USD" description="VMPAYMENT_ONPAY_ONPAY_CURRENCY_USD_EXPLAIN" >
+	    <option value="RUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_RUR_CAPTION</option>
+	    <option value="EUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_EUR_CAPTION</option>
+	    <option value="USD">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_USD_CAPTION</option>
+	    <option value="TST">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_TST_CAPTION</option>
+	    <option value="LIE">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIE_CAPTION</option>
+	    <option value="LIQ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIQ_CAPTION</option>
+	    <option value="LIU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIU_CAPTION</option>
+	    <option value="LIZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIZ_CAPTION</option>
+	    <option value="WMB">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMB_CAPTION</option>
+	    <option value="WME">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WME_CAPTION</option>
+	    <option value="WMR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMR_CAPTION</option>
+	    <option value="WMU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMU_CAPTION</option>
+	    <option value="WMZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMZ_CAPTION</option>
+	</param>
+	<param name="ONPAY_CURRENCY_EUR" type="list"  label="VMPAYMENT_ONPAY_ONPAY_CURRENCY_EUR" description="VMPAYMENT_ONPAY_ONPAY_CURRENCY_EUR_EXPLAIN" >
+	    <option value="RUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_RUR_CAPTION</option>
+	    <option value="EUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_EUR_CAPTION</option>
+	    <option value="USD">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_USD_CAPTION</option>
+	    <option value="TST">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_TST_CAPTION</option>
+	    <option value="LIE">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIE_CAPTION</option>
+	    <option value="LIQ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIQ_CAPTION</option>
+	    <option value="LIU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIU_CAPTION</option>
+	    <option value="LIZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIZ_CAPTION</option>
+	    <option value="WMB">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMB_CAPTION</option>
+	    <option value="WME">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WME_CAPTION</option>
+	    <option value="WMR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMR_CAPTION</option>
+	    <option value="WMU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMU_CAPTION</option>
+	    <option value="WMZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMZ_CAPTION</option>
+	</param>
+	<param name="ONPAY_CURRENCY_RUB" type="list"  label="VMPAYMENT_ONPAY_ONPAY_CURRENCY_RUB" description="VMPAYMENT_ONPAY_ONPAY_CURRENCY_RUB_EXPLAIN" >
+	    <option value="RUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_RUR_CAPTION</option>
+	    <option value="EUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_EUR_CAPTION</option>
+	    <option value="USD">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_USD_CAPTION</option>
+	    <option value="TST">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_TST_CAPTION</option>
+	    <option value="LIE">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIE_CAPTION</option>
+	    <option value="LIQ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIQ_CAPTION</option>
+	    <option value="LIU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIU_CAPTION</option>
+	    <option value="LIZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIZ_CAPTION</option>
+	    <option value="WMB">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMB_CAPTION</option>
+	    <option value="WME">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WME_CAPTION</option>
+	    <option value="WMR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMR_CAPTION</option>
+	    <option value="WMU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMU_CAPTION</option>
+	    <option value="WMZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMZ_CAPTION</option>
+	</param>
+	<param name="ONPAY_CURRENCY_UAH" type="list"  label="VMPAYMENT_ONPAY_ONPAY_CURRENCY_UAH" description="VMPAYMENT_ONPAY_ONPAY_CURRENCY_UAH_EXPLAIN" >
+	    <option value="RUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_RUR_CAPTION</option>
+	    <option value="EUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_EUR_CAPTION</option>
+	    <option value="USD">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_USD_CAPTION</option>
+	    <option value="TST">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_TST_CAPTION</option>
+	    <option value="LIE">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIE_CAPTION</option>
+	    <option value="LIQ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIQ_CAPTION</option>
+	    <option value="LIU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIU_CAPTION</option>
+	    <option value="LIZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIZ_CAPTION</option>
+	    <option value="WMB">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMB_CAPTION</option>
+	    <option value="WME">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WME_CAPTION</option>
+	    <option value="WMR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMR_CAPTION</option>
+	    <option value="WMU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMU_CAPTION</option>
+	    <option value="WMZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMZ_CAPTION</option>
+	</param>
+	<param name="ONPAY_CURRENCY_BYR" type="list"  label="VMPAYMENT_ONPAY_ONPAY_CURRENCY_BYR" description="VMPAYMENT_ONPAY_ONPAY_CURRENCY_BYR_EXPLAIN" >
+	    <option value="RUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_RUR_CAPTION</option>
+	    <option value="EUR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_EUR_CAPTION</option>
+	    <option value="USD">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_USD_CAPTION</option>
+	    <option value="TST">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_TST_CAPTION</option>
+	    <option value="LIE">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIE_CAPTION</option>
+	    <option value="LIQ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIQ_CAPTION</option>
+	    <option value="LIU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIU_CAPTION</option>
+	    <option value="LIZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_LIZ_CAPTION</option>
+	    <option value="WMB">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMB_CAPTION</option>
+	    <option value="WME">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WME_CAPTION</option>
+	    <option value="WMR">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMR_CAPTION</option>
+	    <option value="WMU">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMU_CAPTION</option>
+	    <option value="WMZ">VMPAYMENT_ONPAY_ONPAY_CURRENCY_OPTION_WMZ_CAPTION</option>
+	</param>
+	<field name="status_pending" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_ONPAY_STATUS_PENDING" description="VMPAYMENT_ONPAY_STATUS_PENDING_EXPLAIN" />
+	<field name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_ONPAY_STATUS_SUCCESS" description="VMPAYMENT_ONPAY_STATUS_SUCCESS_EXPLAIN" />
+	<param name="payment_logos" type="vmfiles" label="VMPAYMENT_ONPAY_LOGOS"
+		description="VMPAYMENT_ONPAY_LOGOS_EXPLAIN"
+		directory="/images/stories/virtuemart/payment"
+		default="default" hide_default="1" hide_none="1"
+		stripext="0"   exclude="^_" />
+	<param name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_ONPAY_COUNTRIES" description="VMPAYMENT_ONPAY_COUNTRIES_EXPLAIN"/>
+	<param name="min_amount" type="text"  label="VMPAYMENT_ONPAY_MIN_AMOUNT" description="VMPAYMENT_ONPAY_MIN_AMOUNT_EXPLAIN" />
+	<param name="max_amount" type="text"  label="VMPAYMENT_ONPAY_MAX_AMOUNT" description="VMPAYMENT_ONPAY_MAX_AMOUNT_EXPLAIN" />
+	<param name="cost_per_transaction" type="text"  label="VMPAYMENT_ONPAY_COST_PER_TRANSACTION" description="VMPAYMENT_ONPAY_COST_PER_TRANSACTION_EXPLAIN" />
+	<param name="cost_percent_total" type="text"  label="VMPAYMENT_ONPAY_COST_PERCENT_TOTAL" description="VMPAYMENT_ONPAY_COST_PERCENT_TOTAL_EXPLAIN" />
+	<param name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_ONPAY_TAX" description="VMPAYMENT_ONPAY_TAX_EXPLAIN" />
+	</params>
+</install>
